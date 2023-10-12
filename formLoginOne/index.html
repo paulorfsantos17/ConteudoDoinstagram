@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main >
+
+    <div class="card">
+      <form  class="loginForm">
+        <h1>Login</h1>
+        <div class="content-input">
+          <input type="text" id="username" class="input-form">
+          <label for="username" class="label-username">Username</label>
+        </div>
+        <div class="content-input">
+          <input type="text" id="password" class="input-form">
+          <label for="password" class="label-username">Password</label>
+        </div>
+        <button>GO</button>
+  
+        
+        <div id="buttonToogle" onclick="handleToogleChange()" class="button-sign-in"><img class="pen" src="assets/pen.svg"/></div>
+      </form>
+  
+      <form id="formSingin" class="signin-form" >
+        <div class="content-title-closed"><h1>Register</h1><img src="/assets/closed.svg" onclick="handleToogleChange()"/></div>
+        <div class="content-input">
+          <input type="text" id="nameSing" class="input-form">
+          <label for="nameSing" class="label-username">Username</label>
+        </div>
+        <div class="content-input">
+          <input type="text" id="passSing" class="input-form">
+          <label for="passSing" class="label-username">Password</label>
+        </div>
+        <div class="content-input">
+          <input type="text" id="newPassSign" class="input-form">
+          <label for="newPassSign" class="label-username">New Password</label>
+        </div>
+        <button>GO</button>
+      </form>
+    </div>
+    
+    
+
+  </main>
+  <script src="/index.js"></script>
+</body>
+
+
+</html>

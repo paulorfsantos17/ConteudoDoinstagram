@@ -1,0 +1,236 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4B5563;
+
+}
+
+form {
+  padding: 4rem;
+  border-radius: 0.5rem;
+  border: solid #9CA3AF 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem
+}
+
+.card {
+  position: relative;
+}
+
+.loginForm {
+  background-color: #f1f1f1;
+  position: relative;
+  transition: 1s;
+}
+
+input {
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: #9CA3AF;
+  border: none;
+  border-bottom: solid 1px ;
+  background-color: transparent;
+  transition: .3s;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: solid .15rem #5521B5 ;
+
+}
+
+
+.label-username {
+  z-index: 10;
+  position: absolute;
+  left: .9rem;
+  top: 1.3rem;
+  font-size: 1.6rem;
+  color: #9CA3AF;
+  transition: .5s ease-out;
+}
+
+h1 {
+  color: #5521B5;
+  text-transform: uppercase;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items:  center  ;
+  color: #9CA3AF ;
+  padding: 1rem;
+  background-color: transparent;
+  font-size: 1.5rem;
+  border: 1px solid #9CA3AF;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+button:hover {
+  border-color: #5521B5;
+  color: #5521B5;
+}
+.content-input {
+  position: relative;
+}
+
+
+.input-form:focus  + .label-username {
+  font-size: 1.2rem;
+  top: -.6rem;
+  color: #5521B5;
+  background-color: transparent;
+
+}
+
+.button-sign-in{
+  position: absolute;
+  background-color: #5521B5;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  right: -45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s ease-out;
+}
+
+.button-active {
+  right: 0;
+  opacity: 0;
+  transform: scale(0.2);
+  transition:  .3s ease-out;
+}
+
+
+.pen {
+  width: 50%;
+  height: 50%;
+}
+
+.signin-form {
+  width: 0;
+  height: 90%;
+  background-color: #5521B5;
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  visibility: hidden;
+}
+
+.singin-disabled {
+  visibility: hidden;
+  opacity: 0;
+  transition:   .8s ease ;
+}
+
+
+
+.active .content-title-closed h1 {
+  color: #f1f1f1;
+  opacity: 1;
+  transition: .5s ease-out;
+}
+
+
+.signin-form 
+.input-form:focus  + .label-username {
+  color: #f1f1f1;
+}
+.signin-form 
+.content-input {
+  transform: scale(0.2);
+  transition: .3s ease-out;
+}
+
+.active .content-input{
+  transform: scale(1);
+  transition: .6s ease-in;
+}
+
+.signin-form
+input:focus {
+  outline: none;
+  border-bottom: solid .15rem #f1f1f1 ;
+}
+
+.signin-form
+button:hover {
+  border-color: #f1f1f1;
+  color: #f1f1f1;
+}
+
+.active {
+  width: 80%;
+  height: 90%;
+  display: flex;
+  visibility: visible;
+  animation: fadeIn .5s ease-in backwards; 
+}
+
+.signin-form button{
+  transform: scale(0.2);
+  transition: .3s ease-out;
+}
+
+.active button{
+  transform: scale(1);
+  transition: .6s ease-in;
+}
+
+
+.content-title-closed {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-title-closed > img {
+  width: 1.2rem;
+}
+
+
+
+@keyframes slideInput {
+  0% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+
+  }
+}
+@keyframes fadeOut {
+  0% {
+    
+    opacity: 1;
+  }
+  100%{
+    visibility: hidden;
+    opacity: 0;
+
+  }
+}

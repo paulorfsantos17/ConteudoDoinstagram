@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-color: #000;
+  width: 100vw;;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div {
+  width: 450px;
+  height: 650px;
+  border: 12px solid #fff;
+  border-radius: .5rem;
+  background-image: url("https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80");
+  background-size: 110%;
+  transition:background-size .8s ease-in;
+}
+
+div:hover {
+  background-size: 120%;
+}
